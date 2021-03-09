@@ -15,9 +15,7 @@
 (Пока пытался поправить это, сломал еще что-то, после чего курсы тоже не создаются:
 этослучилось когда в EApplic добавил
 
-    /**
-     * @ORM\ManyToOne(targetEntity=ECourse::class, inversedBy="NameCourse")
-     */
-    private $CourseName;
-)
+   
+      @ORM\ManyToOne(targetEntity=ECourse::class, inversedBy="NameCourse")
+   )
 
