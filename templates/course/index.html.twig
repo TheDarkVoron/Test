@@ -1,0 +1,28 @@
+{% extends 'course/coursebase.html.twig' %}
+{%  block body %}
+
+    <a href="{{path('home')}}">Заявки</a>
+
+    <h1>
+        {{ title }}
+    </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ form(form) }}
+            </div>
+        </div>
+    </div>
+
+    <h2>Список курсов</h2>
+
+    <ul>
+        {% for Cour_item in Cour %}
+            <li>{{ Cour_item.Name}}<a href="{{path('course_home_update', {'id': Cour_item.id}) }}"
+                                      class="btn-link">
+                    Редактировать</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

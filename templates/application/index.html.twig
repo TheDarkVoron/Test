@@ -1,0 +1,33 @@
+{% extends 'application/base.html.twig' %}
+{%  block body %}
+
+    <a href="{{path('course_home')}}">Курсы</a>
+
+    <h1>
+        {{ title }}
+    </h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ form(form) }}
+            </div>
+        </div>
+    </div>
+
+    <h2>Список заявок</h2>
+
+    <ul>
+        {% for Applic_item in Applic %}
+            <li>{{ Applic_item.Name}} <a href="{{path('home_update', {'id': Applic_item.id}) }}"
+                                         class="btn-link">
+                    Редактировать</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
+
+
+{% endblock %}
