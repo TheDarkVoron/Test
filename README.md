@@ -2,14 +2,12 @@
 Имеется 2 ошибки, которые не могу исправить:
 1. При попытке вывести список через
 
-    <ul>
+
         {% for Cour_item in Cour %}
             <li>{{ Cour_item.Name}}<a href="{{path('course_home_update', {'id': Cour_item.id}) }}"
             class="btn-link">
             Редактировать</a>
-</li>
-        {% endfor %}
-    </ul>
+
     
     появляется ошибка. course/index.html.twig
     
